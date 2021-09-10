@@ -1,0 +1,128 @@
+/* Font From Google */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+/* General Styles */
+* {
+  font-family: "Red Hat Text", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+body {
+  background: hsl(235, 16%, 14%);
+}
+ul {
+  list-style: none;
+}
+.container {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container h1 {
+  color: #fff;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.container .counter {
+  display: flex;
+}
+.container .counter div {
+  text-align: center;
+  margin: 4px;
+  border-radius: 5px;
+}
+.container .counter div div.num {
+  background: hsl(236, 21%, 26%);
+  color: hsl(345, 95%, 68%);
+  padding: 20px;
+  font-size: 3rem;
+  box-shadow: 3px 1px 20px 10px rgba(1, 1, 1, 0.2);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 4px;
+  line-height: 100%;
+  min-width: 130px;
+}
+.container .counter div div.num::before,
+.container .counter div div.num::after {
+  content: "";
+  background: hsl(235, 16%, 14%);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-7.5px);
+  border-radius: 50%;
+}
+.container .counter div div.num::before {
+  left: -7.5px;
+}
+.container .counter div div.num::after {
+  right: -7.5px;
+}
+.container .counter div div.overlay {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: rgba(4, 4, 4, 0.1);
+  top: -4px;
+  left: -4px;
+}
+.container .counter div p {
+  color: hsl(237, 18%, 59%);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 15px;
+}
+.container .socail {
+  position: absolute;
+  bottom: 30px;
+  z-index: 99;
+}
+.container .socail ul {
+  display: flex;
+}
+.container .socail ul li {
+  margin: 10px;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(images/bg-stars.svg);
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 190px;
+  bottom: 0;
+  background: url(images/pattern-hills.svg) no-repeat;
+}
+@media (max-width: 600px) {
+  .container {
+    min-height: 80vh;
+    z-index: 99999;
+  }
+  .container .counter {
+    flex-wrap: wrap;
+  }
+  .container .counter div div.num {
+    font-size: 0.8rem;
+    min-width: 60px;
+    padding: 20px 0;
+  }
+  .container .counter div p {
+    font-size: 7px;
+  }
+  .attribution {
+  }
+}
